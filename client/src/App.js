@@ -7,8 +7,6 @@ import { ethers } from "ethers";
 // Constants
 const TWITTER_HANDLE = "HeyitsSagar20";
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
-const OPENSEA_LINK = "";
-const TOTAL_MINT_COUNT = 50;
 
 const App = () => {
   const [currentAccount, setCurrentAccount] = useState("");
@@ -66,7 +64,7 @@ const App = () => {
       const { ethereum } = window;
 
       if (ethereum) {
-        const provider = new ethers.providers.Web3Provider(ethereum);
+        const provider = new ethers.Web3Provider(ethereum);
         const signer = provider.getSigner();
         const connectedContract = new ethers.Contract(
           CONTRACT_ADDRESS,
